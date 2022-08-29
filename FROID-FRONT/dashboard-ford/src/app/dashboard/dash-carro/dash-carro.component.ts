@@ -92,20 +92,20 @@ configSoftware: any = {
     }
 }
 
-    for(let itens of this.veiculosDados){
-      if(itens.id == this.VeiculoEscolhido.id ){
+  //   for(let itens of this.veiculosDados){
+  //     if(itens.id == this.VeiculoEscolhido.id ){
 
-        this.VeiculoEscolhido.vin = itens.vin
-        this.VeiculoEscolhido.odometer = itens.odometer
-        this.VeiculoEscolhido.status = itens.status
-        this.VeiculoEscolhido.tirePressure = itens.tirePressure
-        this.VeiculoEscolhido.batteryStatus = itens.batteryStatus
-        this.VeiculoEscolhido.fuelLevel = itens.fuelLevel
-        this.VeiculoEscolhido.latitude = itens.latitude
-        this.VeiculoEscolhido.longitude = itens.longitude
+  //       this.VeiculoEscolhido.vin = itens.vin
+  //       this.VeiculoEscolhido.odometer = itens.odometer
+  //       this.VeiculoEscolhido.status = itens.status
+  //       this.VeiculoEscolhido.tirePressure = itens.tirePressure
+  //       this.VeiculoEscolhido.batteryStatus = itens.batteryStatus
+  //       this.VeiculoEscolhido.fuelLevel = itens.fuelLevel
+  //       this.VeiculoEscolhido.latitude = itens.latitude
+  //       this.VeiculoEscolhido.longitude = itens.longitude
 
-    }
-  }
+  //   }
+  // }
 
 }
 
@@ -132,19 +132,19 @@ configSoftware: any = {
 
     }
   }
-  for(let itens of this.veiculos){
-    if(itens.id == this.VeiculoEscolhido.id){
+//   for(let itens of this.veiculos){
+//     if(itens.id == this.VeiculoEscolhido.id){
 
-      this.VeiculoEscolhido.id = itens.id
-      this.VeiculoEscolhido.model = itens.model
-      this.VeiculoEscolhido.volumetotal  = itens.volumetotal
-      this.VeiculoEscolhido.connected = itens.connected
-      this.VeiculoEscolhido.softwareUpdates = itens.softwareUpdates
-      this.VeiculoEscolhido.imagem = `assets/${itens.model.toLocaleLowerCase()}.png`
-      this.DetalharGraficoConected(this.VeiculoEscolhido.connected, this.VeiculoEscolhido.volumetotal )
-      this.DetalharGraficoSoftware(this.VeiculoEscolhido.softwareUpdates, this.VeiculoEscolhido.volumetotal )
-    }
-}
+//       this.VeiculoEscolhido.id = itens.id
+//       this.VeiculoEscolhido.model = itens.model
+//       this.VeiculoEscolhido.volumetotal  = itens.volumetotal
+//       this.VeiculoEscolhido.connected = itens.connected
+//       this.VeiculoEscolhido.softwareUpdates = itens.softwareUpdates
+//       this.VeiculoEscolhido.imagem = `assets/${itens.model.toLocaleLowerCase()}.png`
+//       this.DetalharGraficoConected(this.VeiculoEscolhido.connected, this.VeiculoEscolhido.volumetotal )
+//       this.DetalharGraficoSoftware(this.VeiculoEscolhido.softwareUpdates, this.VeiculoEscolhido.volumetotal )
+//     }
+// }
 
 }
 

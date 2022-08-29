@@ -8,8 +8,8 @@ const schemaCadastroVeiculos = yup.object().shape({
     batteryStatus: yup.string().required('O campo status_bateria é obrigatório.'),
     fuelLevel: yup.number().required('O campo nivel_combustivel é obrigatório.'),
     latitude: yup.number().required('O campo latitude é obrigatório.'),
-    longitude: yup.number().required('O campo longitude é obrigatório.'),
-    vehicle_id: yup.number().required('O campo id vehicle é necessário')
+    longitude: yup.number().required('O campo longitude é obrigatório.')
+    
 });
 
 const schemaAtualizarVeiculos = yup.object().shape({
@@ -20,8 +20,8 @@ const schemaAtualizarVeiculos = yup.object().shape({
     batteryStatus: yup.string(),
     nivel_combustivel: yup.number(),
     latitude: yup.number(),
-    longitude: yup.number(),
-    vehicle_id: yup.number()
+    longitude: yup.number()
+   
 });
 
 

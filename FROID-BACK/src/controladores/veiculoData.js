@@ -4,9 +4,7 @@ const { schemaCadastroVeiculos, schemaAtualizarVeiculos } = require('../validaco
 
 const listarVeiculos = async (req, res) => {
     try {
-        let veiculos = await knex('vehicledata')
-        .join('vehicle', 'vehicledata.vehicle_id', 'vehicle.id')
-        .select('vehicledata.*','vehicle.model' );
+        let veiculos = await knex('vehicledata');
     return res.status(200).json(veiculos)
     } catch (error) {
         return res.status(500).json({mensagem: error.message})
