@@ -1,0 +1,31 @@
+
+#logo-ford-login{
+  width: 300px;
+
+}
+
+
+.text-center.text-success{
+  padding: 50px;
+  padding-top: 220px;
+}
+
+.col-sm-6.bg-secondary.bg-opacity-50  {
+  height: 100vh;
+
+}
+
+#container-form{
+  width: 85%;
+}
+.form-check{
+  padding-bottom: 10px;
+}
+.form-check .form-check-input {
+  display: fixed;
+  float: 0;
+  width: 2.3rem;
+  height: 1.3rem;
+
+}
+

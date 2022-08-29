@@ -1,0 +1,11 @@
+#img-menu-lateral{
+  width: 200px;
+}
+.dropdown-menu{
+  display: relative;
+  left: -80px;
+}
+svg {
+  width: 15px;
+  margin-right: 5px;
+}

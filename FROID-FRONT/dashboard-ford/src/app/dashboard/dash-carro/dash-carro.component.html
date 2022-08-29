@@ -1,0 +1,119 @@
+<app-menu-superior></app-menu-superior>
+<div class="tela-dash">
+
+
+<h1 class="text-center text-primary p-5" >Dashboard FORD</h1>
+
+<div class="container-flex" >
+
+  <div class="row row-cols-4 row-cols-md-4 g-6 card-group ">
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header" >
+  Veículo
+
+        </h5>
+        <div class="card-body">
+          <div class="dropdown ">
+
+
+              <button class="btn btn-secondary dropdown-toggle bg-transparent text-dark fs-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{VeiculoEscolhido.model || "Veiculo"}}
+              </button>
+
+            <ul class="dropdown-menu">
+              <div *ngFor="let veiculo of veiculos" >
+
+                <li><button class="dropdown-item fs-4" type="button" (click)="DetalharCarroEscolhidoPorNome(veiculo.model)"  > {{veiculo.model}} </button></li>
+              </div>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header">Total de Vendas</h5>
+        <div class="card-body">
+          <h5 class="card-title text-primary fs-4"> {{VeiculoEscolhido.volumetotal || 0}} </h5>
+          <p class="card-text text-secondary">Unid.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header">Conectados</h5>
+        <div class="card-body">
+          <h5 class="card-title text-primary fs-4">{{VeiculoEscolhido.connected || 0}}</h5>
+          <p class="card-text text-secondary">Unid.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header">Update Software</h5>
+              <div class="card-body ">
+          <h5 class="card-title text-primary fs-4">{{VeiculoEscolhido.softwareUpdates || 0}}</h5>
+
+          <p class="card-text text-secondary">Unid.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<div class="container d-flex flex-row mb-3 justify-content-between" id="dash-2-linha">
+
+  <div class="img-fluid text-center" id="dash-car-img"  >
+    <img class="img-fluid "[src]="VeiculoEscolhido.imagem">
+  </div>
+  
+  <div class="graficos-donut" >
+    <h4 class="bold text-center">Conectados</h4>
+    <canvas class="graficos-donut" #Conected ></canvas>
+    <p class="text-center">{{VeiculoEscolhido.connectedPorentagem || 0}}%</p>
+
+  </div> 
+   <div class="graficos-donut">
+    <h4 class="bold text-center">Update Software</h4>
+    <canvas  #softwareUpdate ></canvas>
+    <p class="text-center">{{VeiculoEscolhido.softwarePorentagem || 0}}%</p>
+  </div>
+</div>
+
+<table class="table table-striped-columns align-middle " id="tabela-dados-veiculo" >
+  <thead class="table-secondary text-light cor-cabecalho p-3" id="cabecalho-formulario">
+    <th class="fw-semibold fs-5 align-middle" >Códivo Vin</th>
+    <th class="fw-semibold fs-5 align-middle">Odômetro</th>
+    <th class="fw-semibold fs-5 align-middle">Nível de combustivel</th>
+    <th class="fw-semibold fs-5 align-middle">Status</th>
+    <th class="fw-semibold fs-5 align-middle">Lat.</th>
+    <th class="fw-semibold fs-5 align-middle">Long.</th>
+  </thead>
+  <tbody  >
+    <td id="regular-td"> <input type="text" class="text-dark border border-1" [(ngModel)]="VeiculoEscolhido.vin"  (blur)="DetalharCarroEscolhidoPorVin($event)"></td>
+
+    <td class="text-dark fw-semibold" >{{VeiculoEscolhido.odometer || 0}} Km </td>
+    <td class="text-dark fw-semibold">{{VeiculoEscolhido.fuelLevel || 0}}% </td>
+    <td class="text-dark fw-semibold">{{VeiculoEscolhido.batteryStatus || 0}} </td>
+    <td class="text-dark fw-semibold">{{VeiculoEscolhido.latitude || 0}} </td>
+    <td class="text-dark fw-semibold">{{VeiculoEscolhido.longitude || 0}} </td>
+  </tbody>
+  <tfoot class="cor-cabecalho" id="regular-footer">
+    <td class="text-primary"></td>
+    <td class="text-primary"></td>
+    <td class="text-primary"></td>
+    <td class="text-primary"></td>
+    <td class="text-primary"></td>
+    <td class="text-primary"></td>
+
+  </tfoot>
+</table>
+
+</div>

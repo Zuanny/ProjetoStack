@@ -1,0 +1,25 @@
+<app-menu-superior></app-menu-superior>
+<h2 class="text-center">Excluir Modelo de Veiculo</h2>
+<form id="form-cadastro-usuario" class="container" (ngSubmit)="excluirModeloVeiculo()">
+    <div class="mb-3">
+      <label  class="form-label">Modelo</label>
+      <input  class="form-control" type="text"  [(ngModel)]="novoModeloVeiculo.model" name ="model" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Volume Total</label>
+      <input type="number" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="novoModeloVeiculo.volumetotal" name ="volumetotal">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Conectados</label>
+      <input type="number" class="form-control" [(ngModel)]="novoModeloVeiculo.connected" name ="connected">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Atualização de Software</label>
+      <input type="number" class="form-control"  [(ngModel)]="novoModeloVeiculo.softwareUpdates" name ="softwareUpdates">
+    </div>
+    <div class="container text-end ">
+      <button class="btn btn-primary" type="submit" >Excluir</button>
+    </div>
+  
+  
+  </form>

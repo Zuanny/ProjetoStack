@@ -1,0 +1,55 @@
+<app-menu-superior></app-menu-superior>
+<h2 class="text-center">Cadastro de Veiculo</h2>
+<form id="form-cadastro-usuario" class="container" (ngSubmit)="CadastrarVeiculo()">
+    <div class="mb-3">
+      <label  class="form-label">Vin</label>
+      <input  class="form-control" type="text"  [(ngModel)]="veiculo.vin" name ="vin" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Odômetro</label>
+      <input type="number" class="form-control"  aria-describedby="emailHelp" [(ngModel)]="veiculo.odometer" name ="odometer">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Pressão dos Pneus</label>
+      <input type="text" class="form-control" [(ngModel)]="veiculo.tirePressure" name ="tirePressure">
+    </div>
+   
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Status</label>
+
+      <select class="form-select" id="inputGroupSelect01" [(ngModel)]="veiculo.status" name ="status">
+        <option value="on">On</option>
+        <option value="off">Off</option>
+      </select>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Status da Bateria</label>
+        <input type="text" class="form-control"  [(ngModel)]="veiculo.batteryStatus" name ="batteryStatus">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Nível de Combustível</label>
+        <input type="text" class="form-control"  [(ngModel)]="veiculo.fuelLevel" name ="fuelLevel">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Latitude</label>
+        <input type="text" class="form-control"  [(ngModel)]="veiculo.latitude" name ="latitude">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Longitude</label>
+        <input type="text" class="form-control"  [(ngModel)]="veiculo.longitude" name ="longitude">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Modelo de Veiculo</label>
+        
+      <select class="form-select" id="inputGroupSelect01" [(ngModel)]="veiculo.vehicle_id" name ="vehicle_id"  >
+          <option *ngFor="let veiculo of listaVeiculosModel" value="{{veiculo.id}}">{{veiculo.model}}</option>
+      </select>
+      </div>
+    <div class="container text-end ">
+      <button class="btn btn-primary" type="submit" >Cadastrar</button>
+    </div>
+  
+  
+  </form>

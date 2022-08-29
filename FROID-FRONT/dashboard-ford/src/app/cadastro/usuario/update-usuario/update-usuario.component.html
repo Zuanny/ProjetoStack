@@ -1,0 +1,25 @@
+<app-menu-superior></app-menu-superior>
+<h2 class="text-center">Atualizar Usuario</h2>
+<form id="form-cadastro-usuario" class="container" (ngSubmit)="atualizarUsuario()">
+    <div class="mb-3">
+      <label  class="form-label">Nome de Usuario</label>
+      <input  class="form-control" type="text"  [(ngModel)]="novoUsuario.name" name ="name" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="novoUsuario.email" name ="email">
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Nome Completo</label>
+      <input type="text" class="form-control" [(ngModel)]="novoUsuario.full_name" name ="fullName">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Senha</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="novoUsuario.password" name ="password">
+    </div>
+    <div class="container text-end ">
+      <button class="btn btn-primary" type="submit" >Atualizar</button>
+    </div>
+  
+  
+  </form>

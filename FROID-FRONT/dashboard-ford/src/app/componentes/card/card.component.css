@@ -1,0 +1,13 @@
+.card-home{
+  position: fixed;
+
+  top: 15vh;
+  left: 35vw;
+
+
+  z-index: 10;
+  overflow: hidden;
+
+
+
+}

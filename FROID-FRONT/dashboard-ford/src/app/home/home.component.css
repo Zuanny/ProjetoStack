@@ -1,0 +1,5 @@
+#image-backgorund{
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: -1;
+}
